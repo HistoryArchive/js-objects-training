@@ -34,3 +34,32 @@
 */
 
 // YOUR CODE HERE
+
+    
+    function daysUntilDate (dob){
+
+    var currentDate = new Date();
+
+    
+    var birthDay = new Date(dob);
+    var elapsed = (birthDay - currentDate)/1000/86400;
+    var ydiff = currentDate.getYear() - birthDay.getYear();
+  var ddiff = 365 * ydiff;
+    elapsed = Math.abs(elapsed);
+    elapsed = Math.round(elapsed);
+    elapsed = elapsed - ddiff;
+    elapsed = Math.abs(elapsed);
+    return elapsed;
+    }
+ 
+
+
+
+function birthdayReminder(people){
+  for (var i = 0; i <people.length; i++){
+    daysUntilDate(peoplelist[i].dob);
+    
+    console.log(peoplelist[i].name + " birthday is in " + daysUntilDate(peoplelist[i].dob) + " days");
+
+  }
+}

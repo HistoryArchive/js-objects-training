@@ -31,3 +31,16 @@
 */
 
 // YOUR CODE HERE
+
+function countLetter (string) {  
+  var fruits = {};
+  string.split('').forEach(function(num) {
+     if (fruits[num])
+     {
+         fruits[num]++
+     }else{
+         fruits[num]=1
+     }  
+  });
+  return fruits;
+}
